@@ -19,13 +19,13 @@ results_datamerge <- pivot_wider(results,
                                  names_from = c("dependent.var", "dependent.var.value") )
 
 # pivot wide 2 - one row 
-# remove is_ranked column if it exists in resutls
+# remove is_ranked column if it exists in results
 results2 <- results %>% select(-c(is_ranked))
 results_datamerge_one_row <- pivot_wider(results2, 
                                  values_from = "numbers",
                                  names_from = c("dependent.var", "dependent.var.value", "independent.var", "independent.var.value" ))
 
-# write data merge
+# Output
 write.csv(results_datamerge, "output/data_merge.csv", row.names = F)
 write.csv(results_datamerge_one_row, "output/data_merge_single_row.csv", row.names = F)
 
@@ -33,7 +33,7 @@ write.csv(results_datamerge_one_row, "output/data_merge_single_row.csv", row.nam
 #######################################################################################
 # Rank numbers
 
-# is_ranked column to lower
+# is_ranked column to lowercase
 results$is_ranked <- tolower(results$is_ranked)
 
 results_ranked <- results %>% 
@@ -68,16 +68,6 @@ ranked_data_merge_final <- ranked_data_merge %>%
   select(-c(independent.var_op_name))
 
 
-# write ranked data merge
+# Ranked output
 write.csv(ranked_data_merge_final, "output/ranked_datamerge.csv", row.names = F)
-
-
-
-
-
-
-
-
-
-
 
