@@ -70,14 +70,3 @@ ranked_data_merge_final <- ranked_data_merge %>%
 
 # Ranked output
 write.csv(ranked_data_merge_final, "output/ranked_datamerge.csv", row.names = F)
-
-
-
-
-
-
-
-
-
-
-
