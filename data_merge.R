@@ -25,7 +25,8 @@ results_datamerge_one_row <- pivot_wider(results2,
                                  values_from = "numbers",
                                  names_from = c("dependent.var", "dependent.var.value", "independent.var", "independent.var.value" ))
 
-# Output
+
+# Output unranked
 write.csv(results_datamerge, "output/data_merge.csv", row.names = F)
 write.csv(results_datamerge_one_row, "output/data_merge_single_row.csv", row.names = F)
 
