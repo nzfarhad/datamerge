@@ -1,4 +1,4 @@
-## Datamerge script for hypegrammaR rusutls
+## Datamerge script for hypegrammaR results
 
 #### Input  
 csv or excel - column names: dependent.var,	dependent.var.value,	independent.var, independent.var.value,	numbers,	is_ranked.  
